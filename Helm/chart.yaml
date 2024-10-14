@@ -1,0 +1,5 @@
+apiVersion: v2
+name: HR_daily_motivational_quotes
+description: A Helm chart for deploying HR_daily_motivational_quotes
+version: 0.1.0
+appVersion: "1.0"

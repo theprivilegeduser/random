@@ -1,0 +1,13 @@
+version: '7.3'
+
+services:
+  api_data_collector:
+    build: .
+    environment:
+      - API_BASE_URL=https://zenquotes.io/api/today
+      - DB_PATH=/data/your_database.db
+    volumes:
+      - data:/data  
+
+volumes:
+  data:

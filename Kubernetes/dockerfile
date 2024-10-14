@@ -1,0 +1,20 @@
+# Dockerfile
+
+# Use some Python image
+FROM python:3.11
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+
+# Set the working directory in the container
+WORKDIR /HR_daily_motivational_quotes
+
+# Copy the requirements file and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the application code to the container
+COPY script.py config.ini /HR_daily_motivational_quotes/
+
+# Set the command to run the application
+CMD ["python", "script.py"]

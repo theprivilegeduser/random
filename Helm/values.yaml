@@ -1,0 +1,15 @@
+replicaCount: 1
+
+image:
+  repository: theprivilegeduser/HR_Daily_Motivational_Quotes
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+
+resources: {}

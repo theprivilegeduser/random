@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: HR_daily_motivational_quotes_api-data-collector
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: HR_daily_motivational_quotes_api-data-collector
+  template:
+    metadata:
+      labels:
+        app: HR_daily_motivational_quotes_api-data-collector
+    spec:
+      containers:
+      - name: HR_daily_motivational_quotes_api-data-collector
+        image: HR-docker-repo/HR_daily_motivational_quotes_api-data-collector:latest
+        env:
+        - name: API_BASE_URL
+          value: "https://zenquotes.io/api/today"
+        - name: DB_PATH
+          value: "/data/your_database.db"
+        volumeMounts:
+        - mountPath: /data
+          name: HR_daily_motivational_quotes_data-volume
+      volumes:
+      - name: HR_daily_motivational_quotes_data-volume
+        emptyDir: {}
