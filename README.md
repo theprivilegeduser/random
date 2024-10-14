@@ -19,7 +19,7 @@ This project fetches daily quotes from a public API and stores them in a Postgre
 
 ## Project Structure
 
-my-python-app/ ├── Dockerfile ├── docker-compose.yml ├── config.ini ├── app.py ├── Chart.yaml ├── values.yaml └── templates/ ├── app-deployment.yaml ├── app-service.yaml ├── postgres-deployment.yaml └── postgres-service.yaml
+app/ ├── Dockerfile ├── docker-compose.yml ├── config.ini ├── app.py ├── Chart.yaml ├── values.yaml └── templates/ ├── app-deployment.yaml ├── app-service.yaml ├── postgres-deployment.yaml └── postgres-service.yaml
 
 bash
 
@@ -30,8 +30,8 @@ bash
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/my-python-app.git
-   cd my-python-app
+   git clone https://github.com/theprivilegeduser/random.git
+   cd app
 
     Build and run the application with Docker Compose:
 
@@ -47,7 +47,7 @@ Deployment on Kubernetes
 
     bash
 
-docker build -t your-docker-repo/python-app .
+docker build -t theprivilegeduser/random .
 
 Apply the Kubernetes manifests:
 
