@@ -1,4 +1,4 @@
-# Python Quotes Fetcher (Made 100% with ChatGPT)
+# Python Quotes Fetcher (Made 100% by ChatGPT)
 
 This project fetches daily quotes from a public API and stores them in a PostgreSQL database. It uses Python for the application logic, Docker for containerization, and Kubernetes for orchestration.
 
