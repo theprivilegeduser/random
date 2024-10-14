@@ -1,0 +1,9 @@
+replicaCount: 1
+
+image:
+  repository: your-docker-repo/python-app
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
